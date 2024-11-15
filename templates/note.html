@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View/Edit Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .url-box {
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>View/Edit Note</h1>
+    <div class="url-box">
+        Share this URL: <strong>http://localhost:8080/note/{{.ID}}</strong>
+    </div>
+    <form method="POST">
+        <textarea name="content">{{.Content}}</textarea>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
